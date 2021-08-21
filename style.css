@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: hsl(185, 41%, 84%);
+    font-family: 'Space Mono', monospace;
+    padding-top: 30px;
+}
+
+section{
+    background: hsl(0, 0%, 100%);
+    padding: 0 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 20px;
+    margin-top: 40px;
+    max-width: 800px;
+    min-height: 800px;
+}
+
+.bill,.tip-select,.people-number,.output{
+    min-width: 310px;
+    /* border: 1px solid red; */
+}
+
+h1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: hsl(183, 100%, 15%);
+    letter-spacing: 7px;
+}
+
+h2{
+    color: hsl(186, 14%, 43%);
+    font-size: 18px;
+}
+
+input{
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    padding-left: 250px;
+    font-size: 24px;
+    background: hsl(189, 41%, 97%);
+}
+
+input:focus{
+    outline: none;
+    border: 2px solid hsl(172, 67%, 45%);
+}
+
+.percentage-btns{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.percentage-btns>button{
+    margin-bottom: 5px;
+    height: 40px;
+    width: 150px;
+}
+
+#custom{
+    position: relative;
+    padding-left: 100px;
+    width: 150px;
+}
+
+#custom::placeholder{
+    position: absolute;
+    left: 30px;
+    top: 10px;
+}

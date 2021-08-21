@@ -10,45 +10,53 @@
 </head>
 <body>
   <div class="container">
-    <h1>Splitter</h1>
+    <h1>
+      <span>SPLI</span>
+      <span>TTER</span>
+    </h1>
     <section>
-      <div class="bill">
-        <h2>Bill</h2>
-        <input type="text" id="bill">
-      </div>
-      <div class="tip-select">
-        <h2>Select tip %</h2>
-        <div class="percentage-btns">
-          <button id="percentageBtn">5%</button>
-          <button id="percentageBtn">10%</button>
-          <button id="percentageBtn">15%</button>
-          <button id="percentageBtn">25%</button>
-          <button id="percentageBtn">50%</button>
-          <input type="text" id="custom" placeholder="Custom">
+      <div class="all-input">
+        <div class="bill">
+          <h2>Bill</h2>
+          <input type="text" id="bill">
         </div>
-      </div>
-      <div class="people-number">
-        <h2>Number of People</h2>
-        <input type="text" id="peopleNumber">
-      </div>
-      <div class="output">
-        <div class="tip-output">
-          <div class="output-name">
-            <h2>Tip Amount</h2>
-            <p>/ person</p>
+        <div class="tip-select">
+          <h2>Select tip %</h2>
+          <div class="percentage-btns">
+            <button id="percentageBtn">5%</button>
+            <button id="percentageBtn">10%</button>
+            <button id="percentageBtn">15%</button>
+            <button id="percentageBtn">25%</button>
+            <button id="percentageBtn">50%</button>
+            <input type="text" id="custom" placeholder="Custom">
           </div>
-          <span id="tipAmount"></span>
         </div>
-        <div class="tip-output">
-          <div class="output-name">
-            <h2>Total</h2>
-            <p>/ person</p>
+        <div class="people-number">
+          <h2>Number of People</h2>
+          <input type="text" id="peopleNumber">
+        </div>
+      </div>
+      <div class="all-output">
+        <div class="output">
+          <div class="tip-output">
+            <div class="output-name">
+              <h2>Tip Amount</h2>
+              <p>/ person</p>
+            </div>
+            <span id="tipAmount"></span>
           </div>
-          <span id="totalAmount"></span>
+          <div class="tip-output">
+            <div class="output-name">
+              <h2>Total</h2>
+              <p>/ person</p>
+            </div>
+            <span id="totalAmount"></span>
+          </div>
+          <button id="resetBtn">Reset</button>
         </div>
-        <button id="resetBtn">Reset</button>
       </div>
     </section>
+    
   </div>
 </body>
 </html>
