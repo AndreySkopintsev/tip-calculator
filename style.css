@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: hsl(185, 41%, 84%);
+    font-family: 'Space Mono', monospace;
+}
+
+section{
+    background: hsl(0, 0%, 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 20px;
+    margin-top: 80px;
+    max-width: 800px;
+    min-height: 800px;
+}
+
+.bill,.tip-select,.people-number,.output{
+    min-width: 350px;
+    border: 1px solid red;
+}
