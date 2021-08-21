@@ -5,40 +5,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="style.css">
   <title>Frontend Mentor | Tip calculator app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
-
-  Bill
-
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+  <div class="container">
+    <h1>Splitter</h1>
+    <section>
+      <div class="bill">
+        <h2>Bill</h2>
+        <input type="text" id="bill">
+      </div>
+      <div class="tip-select">
+        <h2>Select tip %</h2>
+        <div class="percentage-btns">
+          <button id="percentageBtn">5%</button>
+          <button id="percentageBtn">10%</button>
+          <button id="percentageBtn">15%</button>
+          <button id="percentageBtn">25%</button>
+          <button id="percentageBtn">50%</button>
+          <input type="text" id="custom" placeholder="Custom">
+        </div>
+      </div>
+      <div class="people-number">
+        <h2>Number of People</h2>
+        <input type="text" id="peopleNumber">
+      </div>
+      <div class="output">
+        <div class="tip-output">
+          <div class="output-name">
+            <h2>Tip Amount</h2>
+            <p>/ person</p>
+          </div>
+          <span id="tipAmount"></span>
+        </div>
+        <div class="tip-output">
+          <div class="output-name">
+            <h2>Total</h2>
+            <p>/ person</p>
+          </div>
+          <span id="totalAmount"></span>
+        </div>
+        <button id="resetBtn">Reset</button>
+      </div>
+    </section>
   </div>
 </body>
 </html>
