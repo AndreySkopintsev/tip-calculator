@@ -50,12 +50,22 @@ input{
     height: 50px;
     border-radius: 10px;
     border: none;
-    padding-left: 230px;
+    padding-left: 240px;
     font-size: 24px;
     color: hsl(183, 100%, 15%);
     font-weight: 700;
     font-family: 'Space Mono', monospace;
     background: hsl(189, 41%, 97%);
+}
+
+input#peopleNumber{
+    padding-left: 300px;
+}
+
+input#peopleNumber::placeholder{
+    position: absolute;
+    right: 20px;
+    top: 8px;
 }
 
 input#bill::placeholder{
@@ -77,6 +87,20 @@ button{
     border-radius: 5px;
     border: none;
     background: hsl(183, 100%, 15%);
+    transition: 0.1s ease-in-out;
+}
+
+button:hover{
+    cursor: pointer;
+    background: hsl(183, 100%, 19%);
+}
+
+button.active-btn:hover{
+    background: hsl(172, 67%, 45%);
+}
+
+button:active{
+    transform: scale(0.98);
 }
 
 .active-btn{
@@ -156,7 +180,7 @@ button{
     z-index: 1;
     font-size: 24px;
     position: absolute;
-    right: 100px;
+    right: 130px;
     font-weight: 700;
     color: hsl(186, 14%, 43%);
 }
@@ -167,6 +191,27 @@ i{
     top: 15px;
     left: 20px;
     color: hsl(186, 14%, 43%);
+}
+
+.heading{
+    display: flex;
+    justify-content: space-between;
+}
+
+.error-msg{
+    display: none;
+    color: #B00020;
+    font-size: 14px;
+}
+
+.error{
+    border: 1px solid #B00020;
+    border-radius: 10px;
+}
+
+.error.error-msg{
+    display: block;
+    border: none;
 }
 
 @media (min-width:740px){
@@ -186,7 +231,7 @@ i{
     }
 
     .all-input{
-        width: 40%;
+        width: 45%;
     }
 
     
