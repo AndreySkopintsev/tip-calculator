@@ -38,10 +38,13 @@
           </div>
         </div>
         <div class="people-number">
-          <h2>Number of People</h2>
-          <div class="input-box">
+          <div class="heading">
+            <h2>Number of People</h2>
+            <span id="errorMsg" class="error-msg">Can't be zero</span>
+          </div>
+          <div class="input-box people">
             <i class="fas fa-user"></i>
-            <input onblur="this.placeholder='0'" onfocus="this.placeholder = ''" type="number" id="peopleNumber" placeholder="0">
+            <input min="0" onblur="this.placeholder='0'" onfocus="this.placeholder = ''" type="number" id="peopleNumber" placeholder="0">
           </div>
         </div>
       </div>
