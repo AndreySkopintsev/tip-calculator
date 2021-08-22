@@ -6,6 +6,7 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>Frontend Mentor | Tip calculator app</title>
 </head>
 <body>
@@ -18,22 +19,29 @@
       <div class="all-input">
         <div class="bill">
           <h2>Bill</h2>
-          <input type="text" id="bill">
+          <div class="input-box">
+            <i class="fas fa-dollar-sign"></i>
+            <input type="number" id="bill" placeholder="$0.00">
+          </div>
         </div>
         <div class="tip-select">
           <h2>Select tip %</h2>
           <div class="percentage-btns">
-            <button id="percentageBtn">5%</button>
+            <button class="active-btn" id="percentageBtn">5%</button>
             <button id="percentageBtn">10%</button>
             <button id="percentageBtn">15%</button>
             <button id="percentageBtn">25%</button>
             <button id="percentageBtn">50%</button>
             <input type="text" id="custom" placeholder="Custom">
+            
           </div>
         </div>
         <div class="people-number">
           <h2>Number of People</h2>
-          <input type="text" id="peopleNumber">
+          <div class="input-box">
+            <i class="fas fa-user"></i>
+            <input type="number" id="peopleNumber" placeholder="0">
+          </div>
         </div>
       </div>
       <div class="all-output">
@@ -43,14 +51,14 @@
               <h2>Tip Amount</h2>
               <p>/ person</p>
             </div>
-            <span id="tipAmount"></span>
+            <span id="tipAmount">$0.00</span>
           </div>
           <div class="tip-output">
             <div class="output-name">
               <h2>Total</h2>
               <p>/ person</p>
             </div>
-            <span id="totalAmount"></span>
+            <span id="totalAmount">$0.00</span>
           </div>
           <button id="resetBtn">Reset</button>
         </div>

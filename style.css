@@ -21,11 +21,11 @@ section{
     align-items: center;
     border-radius: 20px;
     margin-top: 40px;
-    max-width: 800px;
-    min-height: 800px;
+    min-width: 370px;
+    min-height: 650px;
 }
 
-.bill,.tip-select,.people-number,.output{
+.bill,.tip-select,.people-number,.all-output{
     min-width: 310px;
     /* border: 1px solid red; */
 }
@@ -45,13 +45,23 @@ h2{
 }
 
 input{
+    position: relative;
     width: 100%;
     height: 50px;
     border-radius: 10px;
     border: none;
-    padding-left: 250px;
+    padding-left: 220px;
     font-size: 24px;
+    color: hsl(183, 100%, 15%);
+    font-weight: 700;
+    font-family: 'Space Mono', monospace;
     background: hsl(189, 41%, 97%);
+}
+
+input::placeholder{
+    position: absolute;
+    right: 15px;
+    top: 10px;
 }
 
 input:focus{
@@ -59,7 +69,23 @@ input:focus{
     border: 2px solid hsl(172, 67%, 45%);
 }
 
+button{
+    font-size: 24px;
+    font-family: 'Space Mono', monospace;
+    color: hsl(189, 41%, 97%);
+    font-weight: 700;
+    border-radius: 5px;
+    border: none;
+    background: hsl(183, 100%, 15%);
+}
+
+.active-btn{
+    background: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+}
+
 .percentage-btns{
+    margin-top: 5px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -81,4 +107,52 @@ input:focus{
     position: absolute;
     left: 30px;
     top: 10px;
+}
+
+.output{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 40px 20px 10px 20px;
+    background: hsl(183, 100%, 15%);
+    border-radius: 10px;
+    min-height: 250px;
+}
+
+.tip-output{
+    color: hsl(186, 14%, 43%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.output-name>h2{
+    color: hsl(189, 41%, 97%);
+}
+
+#resetBtn{
+    width: 100%;
+    height: 50px;
+    margin-top: 20px;
+    background: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+}
+
+span{
+    font-size: 24px;
+    color: hsl(172, 67%, 45%);
+    font-weight: 700;
+}
+
+.input-box{
+    position: relative;
+}
+
+i{
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    color: hsl(186, 14%, 43%);
 }
