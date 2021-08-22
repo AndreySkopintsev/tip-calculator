@@ -50,7 +50,7 @@ input{
     height: 50px;
     border-radius: 10px;
     border: none;
-    padding-left: 240px;
+    padding-left: 200px;
     font-size: 24px;
     color: hsl(183, 100%, 15%);
     font-weight: 700;
@@ -59,7 +59,7 @@ input{
 }
 
 input#peopleNumber{
-    padding-left: 300px;
+    padding-left: 250px;
 }
 
 input#peopleNumber::placeholder{
@@ -238,5 +238,13 @@ i{
     .output{
         min-height: 350px;
         width: 400px;
+    }
+
+    input{
+        padding-left: 240px;
+    }
+
+    input#peopleNumber{
+        padding-left: 300px;
     }
 }

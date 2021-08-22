@@ -22,7 +22,7 @@
           <div class="input-box">
             <!-- <i class="fas fa-dollar-sign"></i> -->
             <span class="dollar-sign">$</span>
-            <input onblur="this.placeholder='$0.00'" step="0.01" onfocus="this.placeholder = ''" type="number" id="bill" placeholder="0.00">
+            <input onblur="this.placeholder='0.00'" step="0.01" onfocus="this.placeholder = ''" type="number" id="bill" placeholder="0.00">
           </div>
         </div>
         <div class="tip-select">
@@ -44,7 +44,7 @@
           </div>
           <div class="input-box people">
             <i class="fas fa-user"></i>
-            <input onblur="this.placeholder='0'" onfocus="this.placeholder = ''" type="number" id="peopleNumber" placeholder="0">
+            <input min="0" onblur="this.placeholder='0'" onfocus="this.placeholder = ''" type="number" id="peopleNumber" placeholder="0">
           </div>
         </div>
       </div>

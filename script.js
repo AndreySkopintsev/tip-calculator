@@ -6,6 +6,7 @@ const peopleNumber = document.getElementById('peopleNumber')
 const peopleDiv = document.querySelector('.people')
 const errorMsg = document.getElementById('errorMsg')
 const resetBtn = document.getElementById('resetBtn')
+const percentageBtns = document.querySelectorAll('#percentageBtn')
 
 let currentPercentage = 0.05
 let people = 0
@@ -24,7 +25,6 @@ function tipAmountChange(value,percentage){
 //Total amount dynamic change
 function totalAmountChange(value,tip){
     let total = ((Number(value)+Number(tip))/people).toFixed(2)
-    console.log(total)
     totalAmount.textContent = `$${total}`
 }
 
@@ -64,7 +64,6 @@ peopleNumber.addEventListener('change',(e)=>{
 
 //Changes value in bill input on blur
 billInput.addEventListener('blur',(e)=>{
-    console.log(e.target.value)
     let bill = Number(e.target.value)
     if(bill > 0){
         billInput.value = `${bill.toFixed(2)}`
@@ -76,7 +75,6 @@ billInput.addEventListener('blur',(e)=>{
 
 //Number of people dynamic change
 peopleNumber.addEventListener('blur',(e)=>{
-    console.log(e.target.value)
     people = Number(e.target.value)
 })
 
@@ -90,4 +88,30 @@ resetBtn.addEventListener('click',()=>{
     billInput.value = ''
     peopleNumber.value = ''
     dollarSpan.style.color = `hsl(186, 14%, 43%)` 
+    errorMessage(false)
+    percentageBtns.forEach(btn => {
+        if(btn.textContent == '5%'){
+            btn.classList.add('active-btn')
+        }else{
+            btn.classList.remove('active-btn')
+        }
+    })
+
+})
+
+//Percentage buttons
+percentageBtns.forEach(btn => {
+    btn.addEventListener('click',(e)=>{
+        let value = e.target.textContent.slice(0,e.target.textContent.length - 1)
+        currentPercentage = Number(value/100)
+        e.target.classList.add('active-btn')
+        percentageBtns.forEach(btn => {
+            if(btn !== e.target){
+                btn.classList.remove('active-btn')
+            }
+        })
+        if(people !== 0 && bill !== 0){
+            tipAmountChange(bill,currentPercentage)
+        }
+    })
 })
