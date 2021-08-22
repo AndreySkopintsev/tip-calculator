@@ -21,7 +21,7 @@ section{
     align-items: center;
     border-radius: 20px;
     margin-top: 40px;
-    min-width: 370px;
+    max-width: 375px;
     min-height: 650px;
 }
 
@@ -140,7 +140,7 @@ button{
     color: hsl(183, 100%, 15%);
 }
 
-span{
+.tip-output>span{
     font-size: 24px;
     color: hsl(172, 67%, 45%);
     font-weight: 700;
@@ -155,4 +155,31 @@ i{
     top: 15px;
     left: 20px;
     color: hsl(186, 14%, 43%);
+}
+
+@media (min-width:740px){
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    section{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        max-width: 900px;
+        min-height: 400px;
+    }
+
+    .all-input{
+        width: 40%;
+    }
+
+    
+    .output{
+        min-height: 350px;
+        width: 400px;
+    }
 }
